@@ -4,8 +4,15 @@ import
 FormControl, useTheme, useMediaQuery } 
 from '@mui/material';
 import {
-	
-}
+	Search,
+	Message,
+	DarkMode,
+	LightMode,
+	Notifications,
+	Help,
+	Menu,
+	Close
+} from '@mui/icons-material';
 
 const Navbar = () => {
 	return (
