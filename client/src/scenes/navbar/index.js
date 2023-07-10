@@ -37,7 +37,10 @@ const Navbar = () => {
 	return (
 		<FlexBetween padding ='1rem 6%' backgroundColor={alt}>
 			<FlexBetween gap='1.75rem'>
-				<Typography>
+				<Typography
+				fontWeight='bold'
+				fontSize='clamp(1rem, 2rem, 2.25rem)'
+				>
 					Sociopedia
 				</Typography>
 			</FlexBetween>
