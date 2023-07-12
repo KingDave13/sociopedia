@@ -66,7 +66,9 @@ const Navbar = () => {
 
 			{isNonMobileScreens ? (
 				<FlexBetween gap ='2rem'>
-					<IconButton onClick={() => }></IconButton>
+					<IconButton onClick={() => dispatch(setMode())}>
+						
+					</IconButton>
 				</FlexBetween>
 				) : (
 				<IconButton></IconButton>
