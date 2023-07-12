@@ -64,11 +64,16 @@ const Navbar = () => {
 
 			{/* DESKTOP NAV */}
 
-			{isNonMobileScreens ? (<FlexBetween></FlexBetween>)
-			 : (<IconButton></IconButton>)}
+			{isNonMobileScreens ? (
+				<FlexBetween gap ='2rem'>
+					<IconButton></IconButton>
+				</FlexBetween>
+				) : (
+				<IconButton></IconButton>
+				)}
 
 		</FlexBetween>
-	)
-}
+	);
+};
 
 export default Navbar;
