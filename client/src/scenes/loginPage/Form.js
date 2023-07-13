@@ -49,9 +49,19 @@ const initialValuesLogin = {
 const Form = () => {
 
 	const [pageType, setPageType] = useState('login');
+	const { palette } = useTheme();
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const isNonMobile = useMediaQuery('(min-width: 600px)');
+	const isLogin = pageType === 'login';
+	const isRegister = pageType === 'register';
+
+	const handleFormSubmit = async (values, onSubmitProps) => {};
 
 	return (
-
+		<Formik>
+			
+		</Formik>
 	)
 };
 
