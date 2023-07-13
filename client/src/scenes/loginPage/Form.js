@@ -16,7 +16,7 @@ import { setLogin } from 'state';
 import Dropzone from 'react-dropzone';
 import FlexBetween from 'components/FlexBetween';
 
-const resgisterSchema = yup.object().shape({
+const registerSchema = yup.object().shape({
 	firstName: yup.string().required('required'),
 	lastName: yup.string().required('required'),
 	email: yup.string().email('invalid email').required('required'),
@@ -74,7 +74,33 @@ const Form = () => {
 				setFieldValue,
 				resetForm
 			}) => (
-				<form></form>
+				<form onSubmit={handleSubmit}>
+					<Box
+					display='grid'
+					gap='30px'
+					gridTemplateColumns='repeat(4, minmax(0, 1fr))'
+					sx={{
+						'& > div': { gridColumn: isNonMobile ? undefined : 
+						'span 4' }
+					}}
+					>
+						{isRegister && (
+							<>
+								<TextField 
+								label='First Name'
+								onBlur={handleBlur}
+								onChange={handleChange}
+								value={values.firstName}
+								name='firstName'
+								error={Boolean(touched.firstName) && 
+								Boolean(errors.firstName)}
+								helperText={touched.firstName && 
+								errors.firstName}
+								/>
+							</>
+						)}
+					</Box>
+				</form>
 			)}
 		</Formik>
 	)
