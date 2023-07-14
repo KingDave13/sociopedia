@@ -138,8 +138,27 @@ const Form = () => {
 								sx={{ gridColumn: 'span 4' }}
 								/>
 
-								<Box>
-									
+								<Box
+								gridColumn='span 4'
+								border={`1px solid ${palette.neutral.medium}`}
+								borderRadius='5px'
+								p='1rem'
+								>
+									<Dropzone
+									acceptedFiles='.jpg,.jpeg,.png'
+									multiple={false}
+									onDrop={(acceptedFiles) => 
+									setFieldValue('picture', acceptedFiles[0])
+									}
+									>
+										{({ getRootProps, getInputProps }) => (
+											<Box
+											{...getRootProps()}
+											>
+												
+											</Box>
+										)}
+									</Dropzone>
 								</Box>
 							</>
 						)}
