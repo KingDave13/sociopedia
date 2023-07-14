@@ -159,7 +159,16 @@ const Form = () => {
 											sx={{ '&:hover': { cursor: 'pointer' } }}
 											>
 												<input {...getInputProps()} />
-												{{}}
+												{!values.picture ? (
+													<p>Add Picture Here</p>
+												) : (
+													<FlexBetween>
+														<Typography>
+															{values.picture.name}
+														</Typography>
+														<EditOutlinedIcon/>
+													</FlexBetween>
+												)}
 											</Box>
 										)}
 									</Dropzone>
