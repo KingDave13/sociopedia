@@ -159,9 +159,24 @@ const MyPostWidget = ({ picturePath }) => {
 							</Typography>
 						</FlexBetween>
 					</>
-				) : (<FlexBetween gap='0.25rem'>
+				) : (
+					<FlexBetween gap='0.25rem'>
 						<MoreHorizOutlined sx={{ color: mediumMain }} />
-					</FlexBetween>)}
+					</FlexBetween>
+				)}
+
+				<Button
+				disabled={!post}
+				onClick={handlePost}
+				sx={{
+					color: palette.background.alt,
+					backgroundColor: palette.primary.main,
+					borderRadius: '3rem'
+				}}
+				>
+					POST
+				</Button>
+
 			</FlexBetween>
 		</WidgetWrapper>
 	)
