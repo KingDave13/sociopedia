@@ -27,10 +27,13 @@ const ProfilePage = () => {
 		getUser();
 	}, []); //eslint-disable-line react-hooks/exhaustive-deps
 
+
+	if (!user) return null;
+
 	return (
-		<div>
-			profilepage
-		</div>
+		<Box>
+			
+		</Box>
 	)
 };
 
