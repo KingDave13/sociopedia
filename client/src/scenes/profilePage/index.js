@@ -9,6 +9,9 @@ import PostsWidget from 'scenes/widgets/PostsWidget';
 import UserWidget from 'scenes/widgets/UserWidget';
 
 const ProfilePage = () => {
+	const [user, setUser] = useState(null);
+	const { userId } = useParams();
+
 	return (
 		<div>
 			profilepage
