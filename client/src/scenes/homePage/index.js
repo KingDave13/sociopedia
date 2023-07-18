@@ -25,12 +25,14 @@ const HomePage = () => {
 			>
 				<Box flexBasis={isNonMobileScreens ? '26%'  : undefined}
 				position={isNonMobileScreens ? 'fixed' : undefined}
+				width={isNonMobileScreens ? '23%' : undefined}
 				>
 					<UserWidget userId={_id} picturePath={picturePath} />
 				</Box>
 
 				<Box flexBasis={isNonMobileScreens ? '42%' : undefined}
 				mt={isNonMobileScreens ? undefined : '2rem'}
+				ml={isNonMobileScreens ? '29%' : undefined}
 				>
 					<MyPostWidget picturePath={picturePath} />
 					<PostsWidget userId={_id} />
